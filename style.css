@@ -145,3 +145,110 @@ footer { text-align: center; padding: 40px; color: var(--text-dim); font-size: 0
     .grid-layout { grid-template-columns: 1fr; }
     .header-content { flex-direction: column; text-align: center; }
 }
+
+/* Contenedor principal de la línea */
+.timeline-container {
+    position: relative;
+    padding-left: 30px; /* Espacio para la línea */
+    margin-top: 20px;
+}
+
+/* La línea vertical */
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 2px;
+    height: 100%;
+    background: var(--border); /* Color sutil para la línea */
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px; /* Más espacio entre trabajos */
+}
+
+/* El punto o nodo de la línea de tiempo */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -35px; /* Centrado sobre la línea vertical */
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent); /* Tu color azul brillante */
+    border: 3px solid var(--card-bg); /* Efecto de recorte */
+    z-index: 1;
+}
+
+/* Ajustes de texto para que respiren mejor */
+.timeline-item h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.timeline-item .date {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.timeline-item ul {
+    margin-top: 12px;
+    list-style-type: none; /* Quitamos los bullets por defecto */
+    padding-left: 0;
+}
+
+.timeline-item li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 6px;
+}
+
+/* Opcional: una pequeña flecha o guión personalizado para la lista */
+.timeline-item li::before {
+    content: "•";
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+}
+
+/* Estilo base para todas las habilidades */
+.skills-grid span {
+    cursor: default;
+    transition: all 0.4s ease; /* Hace que el cambio de color sea suave */
+    border: 1px solid transparent;
+}
+
+/* Nivel Alto: Verde */
+.skills-grid span.nivel-alto:hover {
+    background-color: #22c55e !important; /* Verde esmeralda */
+    color: #ffffff !important;
+    border-color: #166534;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+}
+
+/* Nivel Medio: Amarillo/Ámbar */
+.skills-grid span.nivel-medio:hover {
+    background-color: #eab308 !important; /* Amarillo ámbar */
+    color: #000000 !important;
+    border-color: #a16207;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(234, 179, 8, 0.3);
+}
+
+/* Nivel Bajo: Rojo */
+.skills-grid span.nivel-bajo:hover {
+    background-color: #ef4444 !important; /* Rojo suave */
+    color: #ffffff !important;
+    border-color: #991b1b;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
