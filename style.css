@@ -252,3 +252,28 @@ footer { text-align: center; padding: 40px; color: var(--text-dim); font-size: 0
     transform: translateY(-3px);
     box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
 }
+.skills-legend {
+    margin-top: 25px;
+    display: flex;
+    gap: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed var(--border);
+}
+
+.skills-legend small {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.dot.alto { background-color: #22c55e; }
+.dot.medio { background-color: #eab308; }
+.dot.bajo { background-color: #ef4444; }
