@@ -1,190 +1,147 @@
-/* --- Data-Themed Dark Professional Style v4.1 (Fix) --- */
+:root {
+    --bg: #0f172a;
+    --card-bg: #1e293b;
+    --text-main: #f8fafc;
+    --text-dim: #94a3b8;
+    --accent: #38bdf8;
+    --border: #334155;
+}
 
-/* Estilos Generales */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text-main);
     margin: 0;
-    padding: 0;
-    background-color: #1a1a2e;
-    color: #e0e0e0;
-    overflow-x: hidden;
+    line-height: 1.5;
 }
 
-main {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 0 20px;
-    animation: fadeIn 1s ease-in-out;
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+header { margin-bottom: 50px; }
 
-/* Encabezado */
-header {
-    background-color: transparent;
-    padding: 3rem 1rem;
-    text-align: center;
-    border-bottom: 1px solid #0d3d56;
-}
-
-header h1 { margin: 0; font-size: 2.8rem; color: #ffffff; }
-header h2 {
-    margin: 10px auto 0 auto;
-    font-weight: 300;
-    font-size: 1.2rem;
-    color: #4dd0e1;
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: .15em solid #4dd0e1;
-    width: 100%;
-    animation: blink-caret .75s step-end infinite;
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #4dd0e1; }
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
 .foto-perfil {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 4px solid #4dd0e1;
+    width: 130px;
+    height: 130px;
+    border-radius: 24px;
     object-fit: cover;
-    margin-bottom: 20px;
-    box-shadow: 0 0 15px rgba(77, 208, 225, 0.4);
+    border: 1px solid var(--border);
 }
 
-/* Secciones Generales */
-section {
-    background-color: #1f2833;
-    margin-bottom: 25px;
-    padding: 25px;
-    border-radius: 8px;
-    border: 1px solid #2c3e50;
-    transition: all 0.3s ease-in-out;
+h1 { font-size: 2.2rem; margin: 0; font-weight: 800; letter-spacing: -0.02em; }
+.tagline { color: var(--accent); font-weight: 600; margin: 5px 0 12px 0; }
+
+.header-links a {
+    color: var(--text-dim);
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 0.85rem;
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: all 0.3s;
 }
 
-section:not(#proyectos):hover {
-    border-color: #4dd0e1;
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(77, 208, 225, 0.25);
+.header-links a:hover {
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
 }
 
-section h3 {
-    border-bottom: 2px solid #4dd0e1;
-    padding-bottom: 10px;
-    margin-top: 0;
-    color: #ffffff;
-    font-size: 1.5rem;
-}
-
-/* --- Estilos para la Rejilla de Proyectos --- */
-#proyectos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+/* Layout */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
-#proyectos h3 {
-    width: 100%;
-    margin-bottom: 15px;
+.card {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
 }
 
-.proyecto-flip-container {
-    background-color: transparent;
-    width: 230px;
-    height: 230px;
-    perspective: 1000px;
+.full-width { grid-column: 1 / -1; }
+
+h3 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin: 0 0 20px 0;
 }
 
-.proyecto-flipper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
+/* Skills */
+.skills-group p { font-size: 0.85rem; margin: 15px 0 8px 0; color: var(--text-dim); }
+.skills-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+.skills-grid span {
+    background: #0ea5e91a;
+    color: var(--accent);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
 }
 
-.proyecto-flip-container:hover .proyecto-flipper {
-    transform: rotateY(180deg);
+/* Timeline & Education */
+.education-item { margin-bottom: 15px; }
+.subtext { font-size: 0.9rem; color: var(--text-dim); }
+
+.timeline-item { margin-bottom: 25px; position: relative; }
+.timeline-item h4 { margin: 0; font-size: 1.1rem; color: #fff; }
+.date { font-size: 0.8rem; color: var(--accent); font-weight: 600; }
+.job-meta { font-size: 0.85rem; color: var(--text-dim); margin: 4px 0; font-style: italic; }
+
+ul { padding-left: 18px; margin: 10px 0; }
+li { font-size: 0.9rem; color: var(--text-dim); margin-bottom: 5px; }
+
+/* Proyectos */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
-.proyecto-front, .proyecto-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+.project-card {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    box-sizing: border-box;
-    border-radius: 8px;
-    border: 1px solid #2c3e50;
-    background-color: #1f2833;
 }
 
-.proyecto-back {
-    transform: rotateY(180deg);
+.badge {
+    font-size: 0.65rem;
+    background: var(--border);
+    padding: 2px 8px;
+    border-radius: 4px;
+    vertical-align: middle;
+    margin-left: 5px;
 }
 
-.proyecto-front h4, .proyecto-back h4 {
-    margin-top: 0;
-    margin-bottom: 8px; /* Reducido para dar espacio */
-    color: #4dd0e1;
-    font-size: 1.1rem;
-}
-
-.proyecto-front p {
-    font-size: 0.85rem;
-    margin: 4px 0; /* Añadido para controlar el espacio vertical */
-}
-
-.github-link {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #4dd0e1;
-    color: #1a1a2e;
+.tech-stack { font-size: 0.85rem; margin-top: auto; padding-top: 15px; color: var(--text-dim); }
+.project-link {
+    margin-top: 10px;
+    color: var(--accent);
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.3s;
+    font-weight: 600;
+    font-size: 0.9rem;
 }
 
-.github-link:hover {
-    background-color: #ffffff;
-    transform: scale(1.05);
+footer { text-align: center; padding: 40px; color: var(--text-dim); font-size: 0.8rem; }
+
+@media (max-width: 768px) {
+    .grid-layout { grid-template-columns: 1fr; }
+    .header-content { flex-direction: column; text-align: center; }
 }
-/* --- Fin Estilos de Rejilla --- */
-
-/* Habilidades */
-#habilidades ul { list-style-type: none; padding: 0; }
-#habilidades li {
-    display: inline-block;
-    background-color: #0d3d56;
-    color: #cdeaf1;
-    padding: 8px 15px;
-    margin: 5px 5px 5px 0;
-    border-radius: 5px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 0.95rem;
-    transition: background-color 0.3s ease;
-}
-#habilidades li:hover { background-color: #4dd0e1; color: #1a1a2e; }
-
-/* Contacto */
-#contacto a { color: #4dd0e1; text-decoration: none; font-weight: bold; transition: color 0.3s ease; }
-#contacto a:hover { color: #ffffff; text-decoration: underline; }
-
-/* Pie de página */
-footer { text-align: center; padding: 20px; margin-top: 40px; font-size: 0.9rem; color: #8892b0; }

@@ -3,127 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Victor Bermell del Fresno</title>
+    <title>Victor Bermell | Software Developer Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <img src="images/perfil.jpg" alt="Foto de perfil de Victor Bermell" class="foto-perfil">
-        <h1>Victor Bermell del Fresno</h1>
-        <h2>Desarrollador de Software Junior</h2>
-    </header>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <img src="images/perfil.jpg" alt="Victor Bermell" class="foto-perfil">
+                <div>
+                    <h1>Victor Bermell del Fresno</h1>
+                    <p class="tagline">Desarrollador de Software Junior || Futuro Analista de Datos</p>
+                    <div class="header-links">
+                        <a href="mailto:victorbermelldelfresno@gmail.com">Email</a>
+                        <a href="https://github.com/bermellVL" target="_blank">GitHub</a>
+                        <a href="https://www.linkedin.com/in/v%C3%ADctor-bermell-del-fresno-66a31630a/" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </header>
 
-    <main>
-        <section id="sobre-mi">
-            <h3>Sobre Mí</h3>
-            <p>Apasionado por los datos. Mi objetivo es trabajar en la gestión y programación de bases de datos y software relacionado, como sistemas ERP. Busco aplicar mis habilidades para crear soluciones eficientes y robustas.</p>
-        </section>
+        <main class="grid-layout">
+            <section id="sobre-mi" class="card">
+                <h3>Sobre Mí</h3>
+                <p>Apasionado por los datos. Mi objetivo es trabajar en la gestión y programación de bases de datos como en el analisis de estos. Busco aplicar mis habilidades para crear soluciones eficientes y robustas.</p>
+            </section>
 
-        <section id="habilidades">
-            <h3>Habilidades Técnicas</h3>
-            <ul>
-                <li><strong>Lenguajes:</strong> C#, SQL, Python, Java, Power Shell</li>
-                <li><strong>Web (Familiaridad):</strong> HTML, CSS, React-Native</li>
-                <li><strong>Herramientas y Tecnologías:</strong> SSRS (SQL Server Reporting Services), Git</li>
-            </ul>
-        </section>
+            <section id="habilidades" class="card">
+                <h3>Habilidades Técnicas</h3>
+                <div class="skills-group">
+                    <p><strong>Lenguajes:</strong></p>
+                    <div class="skills-grid">
+                        <span>C#</span> <span>SQL</span> <span>Python</span> <span>Java</span> <span>Power Shell</span>
+                    </div>
+                    <p><strong>Web & Herramientas:</strong></p>
+                    <div class="skills-grid">
+                        <span>React-Native</span> <span>HTML/CSS</span> <span>SSRS</span> <span>Git</span>
+                    </div>
+                </div>
+            </section>
 
-        <section id="educacion">
-            <h3>Educación</h3>
-            <p><strong>Título de Bachillerato(Cientifico)</strong> - Madre Sacramento (2019-2021)</p>
-            <p><strong>Ingeniería Informática(Pausada)</strong> - Universidad Politécnica de Valencia (2021-2023)</p>
-            <p><strong>Grado Superior en Desarrollo de Aplicaciones Multiplataforma</strong> - Florida Universitària (2023-2025)</p>
-        </section>
+            <section id="educacion" class="card">
+                <h3>Educación</h3>
+                <div class="education-item">
+                    <p><strong>Grado Superior en Desarrollo de Aplicaciones Multiplataforma</strong><br>
+                    <span class="subtext">Florida Universitària (2023-2025)</span></p>
+                </div>
+                <div class="education-item">
+                    <p><strong>Ingeniería Informática (Pausada)</strong><br>
+                    <span class="subtext">Universidad Politécnica de Valencia (2021-2023)</span></p>
+                </div>
+                <div class="education-item">
+                    <p><strong>Título de Bachillerato (Científico)</strong><br>
+                    <span class="subtext">Madre Sacramento (2019-2021)</span></p>
+                </div>
+                <h3>Certificaciones</h3>
+                <div class="education-item">
+                    <p><strong>Python TOTAL - Programador Avanzado en 16 días</strong><br>
+                    <span class="subtext">Udemy</span></p>
+                    <div class="header-links">
+                    <a href="https://www.udemy.com/certificate/UC-3daeddbb-ae81-44d3-a4d1-a9895a2a428e/">Certificado</a>
+                    </div>
+                </div>
+            </section>
 
-        <section id="experiencia">
-            <h3>Experiencia Profesional En El Sector</h3>
-            <h4>Prácticas en AHORA (Marzo 2025 - Mayo 2025)</h4>
-            <ul>
-                <li>Consultoría en gestiones empresariales.</li>
-                <li>Gestión de grandes volúmenes de datos empresariales, programación de C# y consultas SQL.</li>
-                <li>Trabajo en equipo utilizando metodologías ágiles, comunicación y atención a clientes en reuniones empresariales.</li>
-            </ul>
+            <section id="experiencia" class="card">
+                <h3>Experiencia Profesional</h3>
                 
-            <h4>Departamento de IT- ACB Iluminacion (Junio 2025 - Actualidad)</h4>
-            <ul>
-                <li>Programador de aplicaciones internas de gestión empresarial.</li>
-                <li>Gestión y automatización de manejo de grandes volúmenes de datos empresariales, programación de C#/PowerShell, consultas de SQL y programación de informes.</li>
-                <li>Trabajo real, primer trabajo en el sector.</li>
-            </ul>
-        </section>
+                <div class="timeline-item">
+                    <h4>IT Dept. — ACB Iluminación</h4>
+                    <span class="date">Junio 2025 - Actualidad</span>
+                    <p class="job-meta">Primer trabajo en el sector / Programador de aplicaciones internas de gestión.</p>
+                    <ul>
+                        <li>Gestión y automatización de manejo de grandes volúmenes de datos empresariales.</li>
+                        <li>Programación de C# / PowerShell y consultas SQL.</li>
+                        <li>Programación de informes y herramientas de gestión.</li>
+                    </ul>
+                </div>
 
-        <section id="proyectos">
-            <h3>Proyectos Destacados</h3>
+                <div class="timeline-item">
+                    <h4>Prácticas — AHORA</h4>
+                    <span class="date">Marzo 2025 - Mayo 2025</span>
+                    <p class="job-meta">Consultoría en gestiones empresariales.</p>
+                    <ul>
+                        <li>Gestión de volúmenes de datos y programación C#/SQL.</li>
+                        <li>Metodologías ágiles y atención a clientes en reuniones empresariales.</li>
+                        <li>Trabajo en equipo y comunicación técnica.</li>
+                    </ul>
+                </div>
+            </section>
 
-            <div class="proyecto-flip-container">
-                <div class="proyecto-flipper">
-                    <div class="proyecto-front">
-                        <h4>CorpTime (Proyecto Individual)</h4>
-                        <p>Una aplicación de gestión de reuniones para consultores, centralizando calendario, lista de empresas, notas y ubicaciones para agilizar la organización.</p>
-                        <p><strong>Tecnologías:</strong> C#</p>
+            <section id="proyectos" class="full-width">
+                <h3>Proyectos Destacados</h3>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h4>CorpTime <span class="badge">Individual</span></h4>
+                        <p>Aplicación de gestión de reuniones para consultores, centralizando calendario, lista de empresas, notas y ubicaciones para agilizar la organización.</p>
+                        <p class="tech-stack"><strong>Tecnologías:</strong> C#</p>
+                        <a href="https://github.com/bermellVL/Corp-Time" target="_blank" class="project-link">Ver en GitHub →</a>
                     </div>
-                    <div class="proyecto-back">
-                        <h4>CorpTime</h4>
-                        <a href="https://github.com/bermellVL/Corp-Time" class="github-link">Ver en GitHub</a>
+
+                    <div class="project-card">
+                        <h4>App-Filmoteca <span class="badge">Individual</span></h4>
+                        <p>Herramienta de consola que combina la API de TMDB, Pandas y la API de Gemini para buscar y recomendar películas de forma inteligente.</p>
+                        <p class="tech-stack"><strong>Tecnologías:</strong> Python</p>
+                        <a href="https://github.com/bermellVL/App-Filmoteca.git" target="_blank" class="project-link">Ver en GitHub →</a>
+                    </div>
+
+                    <div class="project-card">
+                        <h4>Studx <span class="badge">Equipo</span></h4>
+                        <p>App para práctica de idiomas mediante reuniones virtuales entre alumnos y profesores de colegios de todo el mundo.</p>
+                        <p class="tech-stack"><strong>Tecnologías:</strong> React-Native</p>
+                        <a href="https://github.com/rsanzfloridauni/DAM2425_Verd" target="_blank" class="project-link">Ver en GitHub →</a>
+                    </div>
+
+                    <div class="project-card">
+                        <h4>Litterum <span class="badge">Equipo</span></h4>
+                        <p>Librería online que permite la venta de libros y la colaboración entre usuarios para la escritura de historias cortas.</p>
+                        <p class="tech-stack"><strong>Tecnologías:</strong> C#</p>
+                        <a href="https://github.com/bermellVL/Litterium-" target="_blank" class="project-link">Ver en GitHub →</a>
                     </div>
                 </div>
-            </div>
+            </section>
+        </main>
 
-            <div class="proyecto-flip-container">
-                <div class="proyecto-flipper">
-                    <div class="proyecto-front">
-                        <h4>Studx (Proyecto en Equipo)</h4>
-                        <p>App para que profesores y alumnos de diferentes colegios del mundo practiquen idiomas mediante reuniones virtuales entre clases.</p>
-                        <p><strong>Tecnologías:</strong> React-Native</p>
-                    </div>
-                    <div class="proyecto-back">
-                        <h4>Studx</h4>
-                        <a href="https://github.com/rsanzfloridauni/DAM2425_Verd" class="github-link">Ver en GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="proyecto-flip-container">
-                <div class="proyecto-flipper">
-                    <div class="proyecto-front">
-                        <h4>Litterum (Proyecto en Equipo)</h4>
-                        <p>Librería online que, además de vender libros, permite a los usuarios colaborar en la escritura de historias cortas.</p>
-                        <p><strong>Tecnologías:</strong> C#</p>
-                    </div>
-                    <div class="proyecto-back">
-                        <h4>Litterum</h4>
-                        <a href="https://github.com/bermellVL/Litterium-" class="github-link">Ver en GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <div class="proyecto-flip-container">
-                <div class="proyecto-flipper">
-                    <div class="proyecto-front">
-                        <h4>App-Filmoteca(Individual)</h4>
-                        <p>App-Filmoteca es una herramienta de consola en Python que combina la API de TMDB, la librería Pandas y la API de Gemini para buscar y recomendar películas.</p>
-                        <p><strong>Tecnologías:</strong> Python</p>
-                    </div>
-                    <div class="proyecto-back">
-                        <h4>App-Filmoteca</h4>
-                        <a href="https://github.com/bermellVL/App-Filmoteca.git" class="github-link">Ver en GitHub</a>
-                    </div>
-                </div>
-            </div> 
-        </section>
-
-        <section id="contacto">
-            <h3>Contacto</h3>
-            <p>Puedes contactarme a través de mi correo electrónico:</p>
-            <a href="mailto:victorbermelldelfresno@gmail.com">victorbermelldelfresno@gmail.com</a>
-            <p>También puedes encontrarme en LinkedIn:</p>
-            <a href="https://www.linkedin.com/in/v%C3%ADctor-bermell-del-fresno-66a31630a/" target="_blank">https://www.linkedin.com/in/victor-bermell</a>
-            <p>Dale un vistazo a mi GitHub:</p>
-            <a href="https://github.com/bermellVL" target="_blank">https://github.com/bermellVL</a>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Victor Bermell del Fresno </p>
-    </footer>
+        <footer>
+            <p>&copy; 2025 Victor Bermell del Fresno</p>
+        </footer>
+    </div>
 </body>
 </html>
